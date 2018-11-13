@@ -460,8 +460,11 @@ RCT_EXPORT_METHOD(showImagePicker:(NSDictionary *)options callback:(RCTResponseS
             }
 
             [self.response setObject:videoDestinationURL.absoluteString forKey:@"uri"];
-            if (videoRefURL.absoluteString) {
-                [self.response setObject:videoRefURL.absoluteString forKey:@"origURL"];
+            // if (videoRefURL.absoluteString) {
+            //     [self.response setObject:videoRefURL.absoluteString forKey:@"origURL"];
+            // }
+            if (videoURL.absoluteString) {
+                [self.response setObject:videoURL.absoluteString forKey:@"origURL"];
             }
 
             NSDictionary *storageOptions = [self.options objectForKey:@"storageOptions"];
